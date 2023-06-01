@@ -2,7 +2,6 @@
 
 This is a project repository based on [ActNN: Reducing Training Memory Footprint via 2-Bit Activation Compressed Training](https://arxiv.org/abs/2104.14129) by Jianfei Chen\*, Lianmin Zheng\*, Zhewei Yao, Dequan Wang, Ion Stoica, Michael W. Mahoney, and Joseph E. Gonzalez.
 
-**TL; DR.**
 ActNN-PaddlePaddle is a PaddlePaddle library for memory-efficient training. It reduces the training memory footprint by compressing the saved activations. ActNN is implemented as a collection of memory-saving layers. These layers have an identical interface to their PaddlePaddle counterparts.
 
 ## Abstract
@@ -52,7 +51,7 @@ Please use the modules (`paddle.nn.Conv2d`, `paddle.nn.ReLU`, etc.), not the fun
 - Step3: Print the model to confirm that all the modules (Conv2d, ReLU, BatchNorm) are correctly converted to ActNN layers.
 ```python
 print(model)    # Should be actnn.QConv2d, actnn.QBatchNorm2d, etc.
-``` 
+```
 
 
 ### Advanced Features
@@ -109,4 +108,4 @@ If the ActNN library is helpful in your research, please consider citing our pap
   booktitle={International Conference on Machine Learning},
   year={2021}
 }
-``` 
+```
